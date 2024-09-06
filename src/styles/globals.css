@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles for light theme */
+body {
+  background-color: hsl(0, 1%, 97%);
+  color: hsl(0, 0%, 20%);
+}
+
+body[data-theme='dark'] {
+  background-color: hsl(222, 26%, 11%);
+  color: hsl(214, 32%, 91%);
+}
+
+/* Card styles */
+.card {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 20%);
+}
+
+.card[data-theme='dark'] {
+  background-color: hsl(222, 23%, 17%);
+  color: hsl(214, 32%, 91%);
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 20%);
+}
+
+.navbar[data-theme='dark'] {
+  background-color: hsl(218, 23%, 23%);
+  color: hsl(214, 32%, 91%);
+}
+
+/* Progress stats styles */
+.progress-bar {
+  background-color: hsl(214, 32%, 91%);
+}
+
+.progress-bar[data-theme='dark'] {
+  background-color: hsl(218, 17%, 35%);
+}
+
+.progress-bar-filled {
+  background-color: hsl(145, 46%, 51%);
+}
+
+.progress-bar-filled[data-theme='dark'] {
+  background-color: hsl(143, 55%, 62%);
+}
+
+/* globals.css */
+
+:root {
+    --axis-color-light: hsl(243, 53%, 53%);
+    --label-color-light: hsl(243, 53%, 53%);
+    --axis-color-dark: hsl(137, 59%, 59%);
+    --label-color-dark: hsl(222, 37%, 87%);
+  }
+  
+  [data-theme='dark'] {
+    --axis-color: var(--axis-color-dark);
+    --label-color: var(--label-color-dark);
+  }
+  
+  [data-theme='light'] {
+    --axis-color: var(--axis-color-light);
+    --label-color: var(--label-color-light);
+  }
+  

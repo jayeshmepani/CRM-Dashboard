@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import TimeSelector from './TimeSelector';
 import { useTheme } from '../context/ThemeContext';
 
@@ -10,6 +11,11 @@ const Navbar = ({ setTimeRange }) => {
       <h1 className="text-2xl font-bold">CRM Dashboard</h1>
       <div className="flex items-center space-x-4">
         <TimeSelector setTimeRange={setTimeRange} />
+        <Link href="/analytics" passHref>
+          <span className={`px-4 py-2 rounded ${isDarkMode ? 'bg-gray-700' : 'bg-gray-600'} text-white cursor-pointer`}>
+            Go to Analytics
+          </span>
+        </Link>
         <button
           onClick={toggleTheme}
           className={`px-4 py-2 rounded ${isDarkMode ? 'bg-gray-700' : 'bg-gray-600'} text-white`}

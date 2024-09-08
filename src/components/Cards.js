@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
 
-const Cards = ({ stats }) => {
+const Cards = ({ stats = [] }) => { // Default to empty array if stats is undefined
   const { isDarkMode } = useTheme();
 
   return (
